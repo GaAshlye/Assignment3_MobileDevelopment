@@ -228,13 +228,13 @@ class App extends Component {
 
         //destructuring the state object
         const { lng, lat, } = this.state;  
-
+        //sendMapCoordsUpdate={this.handleMapCoordsUpdate} /> --sets the coordinates
         return(
             <React.Fragment>
                 <div className="row py-2">
                     <MapboxMap lng={lng}
                                lat={lat}
-                               sendMapCoordsUpdate={this.handleMapCoordsUpdate} />
+                               sendMapCoordsUpdate={this.handleMapCoordsUpdate} /> 
                 </div>        
                 <div className="row">
                     <PizzaPlaces coords={

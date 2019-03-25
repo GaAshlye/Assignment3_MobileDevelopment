@@ -14,7 +14,7 @@ const Navbar = (props) => {
 
     //we'll conditionally show login or logout
     if(props.userAuthenticated){
-        logged_in_user = firebase.auth().currentUser;
+        logged_in_user = firebase.auth().currentUser; //everything firebase uses for authentication has auth()
         login_content= <LogoutForm user={logged_in_user}
                                     onFormSubmit={props.handleLogoutFormSubmission} />
     }else{

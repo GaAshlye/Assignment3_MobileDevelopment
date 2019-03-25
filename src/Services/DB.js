@@ -34,9 +34,9 @@ const GetAllOrders = (inquiry) => {
     let ordersRef = db.collection("orders");
 
     ordersRef.where("email", "==", `${inquiry.email}`).get()
-            .then( (querySnapshot) => {
+            .then( (querySnapshot) => { //called a promise -- asynchronous programming
                 if(!querySnapshot.empty){
-                    inquiry.callback(querySnapshot);
+                    inquiry.callback(querySnapshot); //inquiry.callback is babb's
                 }
             })
             .catch((error) => {
